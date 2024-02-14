@@ -10,8 +10,14 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('home');
 });
+
+router.get('/register' , function(req, res , next){
+  res.render('index')
+})
+
+
 
 router.get("/login", function(req, res, next){
   
